@@ -23,10 +23,10 @@ public class TaxiRideFiltering {
         //GZIPInputStream is a flink function that reads gz file. It is been called in TaxiRideSource class
         final int maxDelay = 60; //events are out of order by max 60seconds
         final int servingSpeed = 6000; //events of 100 minutes are served in 1 second
-        DataStream<TaxiRide> rides = env.addSource(new TaxiRideSource("C:\\Users\\Varsha Kirani\\Documents\\Work\\DFKI\\LearningFlink\\nycTaxiRides.gz",maxDelay,servingSpeed));
+        DataStream<TaxiRide> rides = env.addSource(new TaxiRideSource("E:\\Work\\DFKI\\FlinkLearning\\nycTaxiRides.gz",maxDelay,servingSpeed));
 
         DataStream<TaxiRide> filteredRides = rides.filter(new checkInNYC());
-        filteredRides.writeAsText("C:\\Users\\Varsha Kirani\\Documents\\Work\\DFKI\\LearningFlink\\flink-java-project\\target\\results\\TaxiRideFiltering.txt");
+        filteredRides.writeAsText("e:\\work\\dfki\\flinklearning\\flink-java-project\\src\\main\\resources\\output.txt");
         env.execute();
 
     }

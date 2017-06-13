@@ -31,7 +31,7 @@ public class TaxiPopularPlaces {
         final int popularityThreshold = 20;
         final int maxDelay = 60; //events are out of order by max 60seconds
         final int servingSpeed = 6000; //events of 100 minutes are served in 1 second
-        DataStream<TaxiRide> rides = env.addSource(new TaxiRideSource("C:\\Users\\Varsha Kirani\\Documents\\Work\\DFKI\\LearningFlink\\nycTaxiRides.gz",maxDelay,servingSpeed));
+        DataStream<TaxiRide> rides = env.addSource(new TaxiRideSource("E:\\Work\\DFKI\\FlinkLearning\\nycTaxiRides.gz",maxDelay,servingSpeed));
 
         DataStream<Tuple5<Float,Float,Long,Boolean,Integer>> gridPlaces = rides
                 .filter(new TaxiRideFiltering.checkInNYC())
