@@ -1,8 +1,8 @@
-e:\Work\DFKI\LearningFlink\flink-java-project\src\main\java\org\apache\flink\quickstart\Demo1.java
-e:\Work\DFKI\LearningFlink\flink-java-project\src\main\java\org\apache\flink\quickstart\TaxiPopularPlaces.java
-e:\Work\DFKI\LearningFlink\flink-java-project\src\main\java\org\apache\flink\quickstart\WordCount.java
-e:\Work\DFKI\LearningFlink\flink-java-project\src\main\java\org\apache\flink\quickstart\BatchJob.java
-e:\Work\DFKI\LearningFlink\flink-java-project\src\main\java\org\apache\flink\quickstart\StreamingJob.java
-e:\Work\DFKI\LearningFlink\flink-java-project\src\main\java\org\apache\flink\quickstart\SocketTextStreamWordCount.java
-e:\Work\DFKI\LearningFlink\flink-java-project\src\main\java\org\apache\flink\quickstart\TaxiRideFiltering.java
-e:\Work\DFKI\LearningFlink\flink-java-project\src\main\java\org\apache\flink\quickstart\Demo2.java
+E:\Work\DFKI\FlinkLearning\flink-java-project\src\main\java\org\apache\flink\quickstart\StreamingJob.java
+E:\Work\DFKI\FlinkLearning\flink-java-project\src\main\java\org\apache\flink\quickstart\Demo1.java
+E:\Work\DFKI\FlinkLearning\flink-java-project\src\main\java\org\apache\flink\quickstart\WordCount.java
+E:\Work\DFKI\FlinkLearning\flink-java-project\src\main\java\org\apache\flink\quickstart\SocketTextStreamWordCount.java
+E:\Work\DFKI\FlinkLearning\flink-java-project\src\main\java\org\apache\flink\quickstart\Demo2.java
+E:\Work\DFKI\FlinkLearning\flink-java-project\src\main\java\org\apache\flink\quickstart\TaxiPopularPlaces.java
+E:\Work\DFKI\FlinkLearning\flink-java-project\src\main\java\org\apache\flink\quickstart\BatchJob.java
+E:\Work\DFKI\FlinkLearning\flink-java-project\src\main\java\org\apache\flink\quickstart\TaxiRideFiltering.java
