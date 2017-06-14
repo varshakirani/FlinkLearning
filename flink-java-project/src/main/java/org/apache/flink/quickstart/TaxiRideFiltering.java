@@ -42,30 +42,11 @@ public class TaxiRideFiltering {
       //          ));
 
         //write to file
-        //filteredRides.writeAsText("e:\\work\\dfki\\flinklearning\\flink-java-project\\src\\main\\resources\\output.txt");
+        filteredRides.writeAsText("e:\\work\\dfki\\flinklearning\\flink-java-project\\src\\main\\resources\\output.txt");
         env.execute();
 
     }
 
-    public static class TaxiRideSchema1 implements DeserializationSchema <TaxiRide> {
-
-        @Override
-        public TaxiRide deserialize(byte[] bytes) throws IOException {
-            return null;
-        }
-
-        @Override
-        public boolean isEndOfStream(TaxiRide taxiRide) {
-            return false;
-        }
-
-
-
-        @Override
-        public TypeInformation getProducedType() {
-            return null;
-        }
-    }
 
     public static class checkInNYC implements FilterFunction<TaxiRide> {
 
