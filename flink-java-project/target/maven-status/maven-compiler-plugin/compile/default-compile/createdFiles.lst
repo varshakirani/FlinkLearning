@@ -9,8 +9,9 @@ org/apache/flink/quickstart/WordCount$LineSplitter.class
 org/apache/flink/quickstart/Demo1$1.class
 org/apache/flink/quickstart/Demo2.class
 org/apache/flink/quickstart/WordCount.class
+org/apache/flink/quickstart/TaxiCleansingKafka.class
 org/apache/flink/quickstart/KafkaConnector.class
-org/apache/flink/quickstart/TaxiRideFiltering$TaxiRideSchema1.class
+org/apache/flink/quickstart/TaxiStream.class
 org/apache/flink/quickstart/TaxiPopularPlaces$fetchCoordinates.class
 org/apache/flink/quickstart/SocketTextStreamWordCount$LineSplitter.class
 org/apache/flink/quickstart/TaxiPopularPlaces$placeCounter.class

@@ -23,7 +23,7 @@ public class Demo1 {
             }
         });
 
-        parsed.writeAsText("C:\\Users\\Varsha Kirani\\Documents\\Work\\DFKI\\LearningFlink\\flink-java-project\\target\\results\\demo1.txt"    );
+        parsed.writeAsText("output.txt"    );
         env.execute();
     }
 }
