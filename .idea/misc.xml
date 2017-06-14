@@ -43,22 +43,19 @@
       <list>
         <option value="$PROJECT_DIR$/flink-java-project/target/maven-archiver/pom.properties" />
         <option value="$PROJECT_DIR$/flink-java-project/pom.xml" />
-        <option value="$PROJECT_DIR$/flink-java-project2/pom.xml" />
         <option value="$PROJECT_DIR$/flink-training-exercises/target/maven-archiver/pom.properties" />
         <option value="$PROJECT_DIR$/flink-training-exercises/pom.xml" />
-        <option value="$PROJECT_DIR$/flink-training-exercises1/target/maven-archiver/pom.properties" />
-        <option value="$PROJECT_DIR$/flink-training-exercises1/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="masterDetails">
     <states>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8 (2)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -6,20 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="flink-java-project (1)" />
-        <module name="flink-training-exercises (1)" />
+        <module name="flink-java-project" />
+        <module name="flink-training-exercises" />
         <module name="maven-archiver (1)" />
         <module name="maven-archiver (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="flink-java-project (1)" target="1.7" />
-      <module name="flink-java-project (2)" target="1.7" />
-      <module name="flink-training-exercises (1)" target="1.7" />
-      <module name="flink-training-exercises (2)" target="1.7" />
+      <module name="flink-java-project" target="1.7" />
+      <module name="flink-training-exercises" target="1.7" />
       <module name="maven-archiver (1)" target="1.5" />
       <module name="maven-archiver (2)" target="1.5" />
-      <module name="maven-archiver (3)" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
