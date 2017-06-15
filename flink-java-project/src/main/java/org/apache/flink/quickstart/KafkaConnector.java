@@ -1,5 +1,6 @@
 package org.apache.flink.quickstart;
 
+import org.apache.flink.streaming.api.CheckpointingMode;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
@@ -17,6 +18,19 @@ public class KafkaConnector {
         //set up stream execution environment
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
+
+        //Checkpointing
+        //start a checkpoint every 1000 ms
+        env.enableCheckpointing(1000);
+        //set mode to exactly once
+        env.getCheckpointConfig().setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE);
+        //make sure 500ms of progress happen between checkpoints
+        env.getCheckpointConfig().setMinPauseBetweenCheckpoints(500);
+        //checkpoints have to complete within one minute or are discarded
+        env.getCheckpointConfig().setCheckpointTimeout(60000);
+        //allow only one checkpoint to be in progress at the same time-
+        env.getCheckpointConfig().setMaxConcurrentCheckpoints(1);
+
         //define properties to connect to Kafka
         Properties props = new Properties();
         props.setProperty("zookeeper.connect","localhost:2181");
@@ -25,7 +39,7 @@ public class KafkaConnector {
 
         //create a data source
         DataStream<String> data = env.addSource(new FlinkKafkaConsumer010<String>(
-                "my-replicated-topic",                  //Kafka topic
+                "myReplicatedTopic",                  //Kafka topic
                 new SimpleStringSchema(),         //deserialization schema
                 props )                           //consumer configuration
         );
@@ -36,11 +50,11 @@ public class KafkaConnector {
         //write data to Kafka
         aStream.addSink(new FlinkKafkaProducer010<String>(
                 "localhost:9092",       //default broker
-                "my-replicated-topic",                 //Kafka topic
+                "myReplicatedTopic",                 //Kafka topic
                 new SimpleStringSchema()           //serialization scheme
         ));
-            data.writeAsText("e:\\work\\dfki\\flinklearning\\flink-java-project\\src\\main\\resources\\output.txt");
-        //        data.print();
+            //data.writeAsText("output.txt");
+                data.print();
         env.execute();
     }
 }

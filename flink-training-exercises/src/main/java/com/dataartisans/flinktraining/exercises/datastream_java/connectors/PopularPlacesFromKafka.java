@@ -25,6 +25,7 @@ import org.apache.flink.api.java.tuple.Tuple;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.tuple.Tuple4;
 import org.apache.flink.api.java.tuple.Tuple5;
+import org.apache.flink.streaming.api.CheckpointingMode;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
@@ -61,6 +62,16 @@ public class PopularPlacesFromKafka {
 		StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 		env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
 		env.getConfig().setAutoWatermarkInterval(1000);
+
+		env.enableCheckpointing(1000);
+		//set mode to exactly once
+		env.getCheckpointConfig().setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE);
+		//make sure 500ms of progress happen between checkpoints
+		env.getCheckpointConfig().setMinPauseBetweenCheckpoints(500);
+		//checkpoints have to complete within one minute or are discarded
+		env.getCheckpointConfig().setCheckpointTimeout(60000);
+		//allow only one checkpoint to be in progress at the same time-
+		env.getCheckpointConfig().setMaxConcurrentCheckpoints(1);
 
 		// configure the Kafka consumer
 		Properties kafkaProps = new Properties();

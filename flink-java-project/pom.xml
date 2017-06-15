@@ -108,6 +108,11 @@ under the License.
   <artifactId>flink-training-exercises</artifactId>
   <version>0.9.0</version>
 </dependency>
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-connector-elasticsearch2_2.10</artifactId>
+			<version>1.2.0</version>
+		</dependency>
 		
 	</dependencies>
 
