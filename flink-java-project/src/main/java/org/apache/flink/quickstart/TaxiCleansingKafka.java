@@ -28,7 +28,8 @@ public class TaxiCleansingKafka {
         //apply filter written in TaxiRideFiltering checkInNYC()
 
         DataStream<TaxiRide> filteredRides = taxiridesBefore.filter(new checkInNYC());
-        filteredRides.writeAsText("/home/varsha/Documents/Work/DFKI/FlinkLearning/flink-java-project/src/main/resources/output.txt");
+        //filteredRides.writeAsText("/home/varsha/Documents/Work/DFKI/FlinkLearning/flink-java-project/src/main/resources/output.txt");
+        filteredRides.print();
         env.execute();
     }
 }
